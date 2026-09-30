@@ -1,0 +1,219 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Contact AQA Capital Group.">
+  <meta name="theme-color" content="#08131f">
+  <title>AQA Capital Group</title>
+  <style>
+    :root {
+      color-scheme: dark;
+      --ink: #f7f4ec;
+      --muted: #aeb8c2;
+      --navy: #08131f;
+      --navy-soft: #102234;
+      --gold: #c6a667;
+      --gold-light: #e7d19c;
+      --line: rgba(231, 209, 156, 0.24);
+    }
+
+    * { box-sizing: border-box; }
+
+    html, body { min-height: 100%; }
+
+    body {
+      margin: 0;
+      min-height: 100svh;
+      overflow-x: hidden;
+      color: var(--ink);
+      background:
+        radial-gradient(circle at 14% 15%, rgba(198,166,103,.11), transparent 34rem),
+        radial-gradient(circle at 90% 84%, rgba(52,95,120,.22), transparent 38rem),
+        var(--navy);
+      font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+    }
+
+    body::before {
+      content: "";
+      position: fixed;
+      inset: 0;
+      pointer-events: none;
+      opacity: .23;
+      background-image:
+        linear-gradient(rgba(255,255,255,.025) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(255,255,255,.025) 1px, transparent 1px);
+      background-size: 48px 48px;
+      mask-image: linear-gradient(to bottom, #000, transparent 82%);
+    }
+
+    .page {
+      position: relative;
+      min-height: 100svh;
+      display: grid;
+      grid-template-rows: auto 1fr auto;
+      width: min(1180px, calc(100% - 48px));
+      margin: 0 auto;
+    }
+
+    header {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 30px 0;
+      border-bottom: 1px solid var(--line);
+    }
+
+    .brand {
+      display: inline-flex;
+      align-items: center;
+      gap: 14px;
+      color: var(--ink);
+      text-decoration: none;
+    }
+
+    .mark {
+      width: 42px;
+      height: 42px;
+      display: grid;
+      place-items: center;
+      border: 1px solid var(--gold);
+      color: var(--gold-light);
+      font-family: Georgia, "Times New Roman", serif;
+      font-size: 14px;
+      letter-spacing: .08em;
+      transform: rotate(45deg);
+    }
+
+    .mark span { transform: rotate(-45deg); }
+
+    .wordmark {
+      font-size: 13px;
+      font-weight: 650;
+      letter-spacing: .2em;
+      text-transform: uppercase;
+    }
+
+    .eyebrow {
+      color: var(--gold-light);
+      font-size: 12px;
+      font-weight: 700;
+      letter-spacing: .22em;
+      text-transform: uppercase;
+    }
+
+    main {
+      display: grid;
+      align-items: center;
+      padding: 82px 0 96px;
+    }
+
+    .hero { max-width: 850px; }
+
+    h1 {
+      max-width: 800px;
+      margin: 22px 0 24px;
+      font-family: Georgia, "Times New Roman", serif;
+      font-size: clamp(54px, 8.2vw, 108px);
+      font-weight: 400;
+      line-height: .94;
+      letter-spacing: -.055em;
+    }
+
+    .lead {
+      max-width: 570px;
+      margin: 0 0 38px;
+      color: var(--muted);
+      font-size: clamp(17px, 2vw, 21px);
+      line-height: 1.7;
+    }
+
+    .button {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      gap: 14px;
+      min-height: 58px;
+      padding: 0 27px;
+      border: 1px solid var(--gold);
+      color: #09131e;
+      background: var(--gold-light);
+      text-decoration: none;
+      font-size: 13px;
+      font-weight: 800;
+      letter-spacing: .14em;
+      text-transform: uppercase;
+      transition: transform .2s ease, background .2s ease, box-shadow .2s ease;
+    }
+
+    .button:hover {
+      transform: translateY(-2px);
+      background: #f0dfb6;
+      box-shadow: 0 14px 35px rgba(0,0,0,.24);
+    }
+
+    .button:focus-visible {
+      outline: 3px solid #fff;
+      outline-offset: 4px;
+    }
+
+    .arrow { font-size: 18px; line-height: 1; }
+
+    footer {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 24px;
+      padding: 25px 0 30px;
+      border-top: 1px solid var(--line);
+      color: #8996a2;
+      font-size: 12px;
+      letter-spacing: .08em;
+      text-transform: uppercase;
+    }
+
+    footer a { color: var(--gold-light); text-decoration: none; }
+    footer a:hover { text-decoration: underline; }
+
+    @media (max-width: 640px) {
+      .page { width: min(100% - 32px, 1180px); }
+      header { padding: 24px 0; }
+      .wordmark { font-size: 11px; letter-spacing: .14em; }
+      main { padding: 64px 0 72px; }
+      h1 { margin-top: 18px; }
+      footer { align-items: flex-start; flex-direction: column; }
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      .button { transition: none; }
+    }
+  </style>
+</head>
+<body>
+  <div class="page">
+    <header aria-label="Site header">
+      <a class="brand" href="#top" aria-label="AQA Capital Group home">
+        <span class="mark" aria-hidden="true"><span>AQA</span></span>
+        <span class="wordmark">AQA Capital Group</span>
+      </a>
+    </header>
+
+    <main id="top">
+      <section class="hero" aria-labelledby="page-title">
+        <div class="eyebrow">AQA Capital Group</div>
+        <h1 id="page-title">Let’s connect.</h1>
+        <p class="lead">For inquiries and business matters, contact our team directly.</p>
+        <a class="button" href="mailto:admin@aqacapitalgroup.com">
+          <span>Email Us Here</span>
+          <span class="arrow" aria-hidden="true">→</span>
+        </a>
+      </section>
+    </main>
+
+    <footer>
+      <span>© 2026 AQA Capital Group</span>
+      <a href="mailto:admin@aqacapitalgroup.com">admin@aqacapitalgroup.com</a>
+    </footer>
+  </div>
+</body>
+</html>
